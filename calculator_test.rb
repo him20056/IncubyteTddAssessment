@@ -18,5 +18,10 @@ class CalculatorTest < Minitest::Test
     err = assert_raises(Exception) { @calculator.add("-1") }
     assert_equal err.message, expected_response
   end
+
+  def test_add_success
+    assert_equal @calculator.add("1"), 1
+    assert_equal @calculator.add("1,5"), 6
+  end
     
 end

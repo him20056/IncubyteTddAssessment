@@ -11,6 +11,11 @@ class Calculator
       raise Exception, "negative numbers not allowed #{negative_num.join(", ")}"
     end
 
+    sum = 0
+
+    number_array.each { |num| sum += num }
+
+    return sum
   end
 
   def string_to_number_array(str)
