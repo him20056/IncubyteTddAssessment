@@ -12,5 +12,11 @@ class CalculatorTest < Minitest::Test
     response = @calculator.add("")
     assert_equal response, expected_response
   end
+
+  def test_negative_numbers
+    expected_response = 'negative numbers not allowed -1'
+    err = assert_raises(Exception) { @calculator.add("-1") }
+    assert_equal err.message, expected_response
+  end
     
 end
