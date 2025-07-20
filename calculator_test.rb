@@ -22,6 +22,9 @@ class CalculatorTest < Minitest::Test
   def test_add_success
     assert_equal @calculator.add("1"), 1
     assert_equal @calculator.add("1,5"), 6
+    assert_equal @calculator.add("//:\n1:2:3:4:5"), 15
+    assert_equal @calculator.add("1,2,3\n4"), 10
+    assert_equal @calculator.add("//@\n3@4@5"), 12
   end
     
 end

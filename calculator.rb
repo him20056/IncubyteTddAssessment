@@ -26,7 +26,7 @@ class Calculator
       delimiter = str.split("\n")[0]
     end
 
-    num_array = str.split(/[\\n,#{delimiter}]/)
+    num_array = str.split(/[\n#{delimiter}]/)
 
     num_array.map(&:to_i)
   end
